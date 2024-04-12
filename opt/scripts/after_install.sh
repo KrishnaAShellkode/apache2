@@ -11,7 +11,7 @@ cwd=$(pwd)
 cd /opt/codedeploy-agent/deployment-root/
 
 # Find all .conf files in the current directory and its subdirectories
-conf_files=$(find . -name "*.conf")
+conf_files=$(find . -name "def.conf")
 
 # Iterate over the .conf files and enable them
 for conf_file in $conf_files; do
