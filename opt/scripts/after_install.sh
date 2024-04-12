@@ -10,19 +10,17 @@ cwd=$(pwd)
 # Change to the deployment root directory
 cd /opt/codedeploy-agent/deployment-root/
 
-# Find all .conf files in the current directory and its subdirectories
+# Find all def.conf files in the current directory and its subdirectories
 conf_files=$(find . -name "def.conf")
 
-# Iterate over the .conf files and enable them
+# Iterate over the def.conf files and enable them
 for conf_file in $conf_files; do
+   # Enable the def.conf file
    a2ensite "$conf_file"
 done
 
 # Reload Apache to apply changes
 systemctl reload apache2
-
-# Change back to the original working directory
-cd "$cwd"
 
 # Restart Apache
 sudo service apache2 restart
