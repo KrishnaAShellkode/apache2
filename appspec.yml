@@ -4,7 +4,7 @@ os: linux
 files:
   - source: /def/scripts
     destination: /opt/scripts
-  - source: /
+  - source: /var/www/def/
     destination: /var/www/def/
     overwrite: true
 file_exists_behavior: OVERWRITE
