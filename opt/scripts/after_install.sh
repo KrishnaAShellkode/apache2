@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Disable def.conf site
-a2dissite /etc/apache2/sites-available/def.conf
-systemctl reload apache2
+#a2dissite /etc/apache2/sites-available/def.conf
+#systemctl reload apache2
 
 # Get the current working directory
 cwd=$(pwd)
