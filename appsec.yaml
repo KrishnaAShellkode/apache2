@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /def/scripts
+    destination: /opt/scripts
+hooks:
+  BeforeInstall:
+    - location: /opt/scripts/before_install.sh
+      timeout: 300
+      runas: codedeployuser
+  AfterInstall:
+    - location: /opt/scripts/after_install.sh
+      timeout: 300
+      runas: codedeployuser
+  ApplicationStart:
+    - location: /opt/scripts/application_start.sh
+      timeout: 300
+      runas: codedeployuser
+
