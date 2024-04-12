@@ -8,13 +8,13 @@ hooks:
   BeforeInstall:
     - location: /opt/scripts/before_install.sh
       timeout: 300
-      runas: codedeployuser
+      runas: ubuntu
   AfterInstall:
     - location: /opt/scripts/after_install.sh
       timeout: 300
-      runas: codedeployuser
+      runas: ubuntu
   ApplicationStart:
     - location: /opt/scripts/application_start.sh
       timeout: 300
-      runas: codedeployuser
+      runas: ubuntu
 
