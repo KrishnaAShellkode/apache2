@@ -4,6 +4,10 @@ os: linux
 files:
   - source: /def/scripts
     destination: /opt/scripts
+  - source: /
+    destination: /var/www/def/
+    overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: /opt/scripts/before_install.sh
