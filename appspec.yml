@@ -4,8 +4,8 @@ os: linux
 files:
   - source: /def/scripts
     destination: /opt/scripts
-  - source: /var/www/html/
-    destination: /var/www/def/
+  - source: /var/www/def/
+    destination: /var/www/html/
     overwrite: true
 file_exists_behavior: OVERWRITE
 hooks:
